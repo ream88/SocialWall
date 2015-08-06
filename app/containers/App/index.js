@@ -11,7 +11,7 @@ const reducer = combineReducers(reducers);
 const store = applyMiddleware(thunk)(createStore)(reducer);
 
 
-store.dispatch(InstagramActions.load());
+store.dispatch(InstagramActions.load('tags/nofilter/media/recent'));
 
 
 @provide(store)
