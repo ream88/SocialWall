@@ -1,0 +1,1 @@
+export const INSTAGRAM_LOAD = 'INSTAGRAM_LOAD';

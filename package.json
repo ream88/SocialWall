@@ -13,6 +13,9 @@
     "babel": "^5.8.21",
     "react": "^0.14.0-beta3",
     "react-dom": "^0.14.0-beta3",
+    "react-redux": "^0.2.2",
+    "redux": "^1.0.0-rc",
+    "redux-thunk": "^0.1.0",
     "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {

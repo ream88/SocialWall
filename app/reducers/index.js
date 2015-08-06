@@ -1,0 +1,1 @@
+export instagram from './instagram';

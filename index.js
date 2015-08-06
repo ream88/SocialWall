@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import InstagramWall from "./components/InstagramWall";
+import App from "./app/containers/App";
 
 
-ReactDOM.render(<InstagramWall clientId={CLIENT_ID} />, document.body);
+ReactDOM.render(<App />, document.body);
