@@ -10,8 +10,10 @@
   "author": "Mario Uher <uher.mario@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "babel": "^5.8.21",
     "react": "^0.14.0-beta3",
-    "react-dom": "^0.14.0-beta3"
+    "react-dom": "^0.14.0-beta3",
+    "whatwg-fetch": "^0.9.0"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
