@@ -1,0 +1,25 @@
+{
+  "name": "SocialWall",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mario Uher <uher.mario@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.0-beta3",
+    "react-dom": "^0.14.0-beta3"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "babel-core": "^5.8.21",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.15.6",
+    "postcss-loader": "^0.5.1",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.11.0"
+  }
+}
