@@ -1,7 +1,6 @@
 import styles from './index.css';
 
 import React, { Component, PropTypes } from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import _ from 'lodash';
 
 
@@ -32,9 +31,9 @@ export default class InstagramWall extends Component {
 
   render() {
     return (
-      <ReactCSSTransitionGroup component="div" className={styles.Wall} transitionName="example" transitionAppear={true}>
+      <div className={styles.Wall}>
         {this.state.images.length == 0 ? '' : this.renderImages()}
-      </ReactCSSTransitionGroup>
+      </div>
     );
   }
 
