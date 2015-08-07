@@ -4,13 +4,13 @@ import { connect } from 'react-redux';
 import * as InstagramActions from '../../actions/InstagramActions';
 
 
-@connect(state => ({ instagram: state.instagram }))
+@connect(state => ({ images: state.images }))
 export default class InstagramApp {
   render() {
-    const { instagram } = this.props;
+    const { images } = this.props;
 
     return (
-      <InstagramWall images={instagram} />
+      <InstagramWall images={images} />
     );
   }
 }

@@ -37427,15 +37427,15 @@
 	  _createClass(InstagramApp, [{
 	    key: 'render',
 	    value: function render() {
-	      var instagram = this.props.instagram;
+	      var images = this.props.images;
 
-	      return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: instagram });
+	      return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images });
 	    }
 	  }]);
 
 	  var _InstagramApp = InstagramApp;
 	  InstagramApp = (0, _reactRedux.connect)(function (state) {
-	    return { instagram: state.instagram };
+	    return { images: state.images };
 	  })(InstagramApp) || InstagramApp;
 	  return InstagramApp;
 	})();
@@ -43703,11 +43703,11 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _instagram2 = __webpack_require__(498);
+	var _images2 = __webpack_require__(498);
 
-	var _instagram3 = _interopRequireDefault(_instagram2);
+	var _images3 = _interopRequireDefault(_images2);
 
-	exports.instagram = _instagram3['default'];
+	exports.images = _images3['default'];
 
 /***/ },
 /* 498 */
@@ -43718,11 +43718,11 @@
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	exports['default'] = faqs;
+	exports['default'] = images;
 
 	var _constantsActionTypes = __webpack_require__(314);
 
-	function faqs(state, action) {
+	function images(state, action) {
 	  if (state === undefined) state = [];
 
 	  switch (action.type) {

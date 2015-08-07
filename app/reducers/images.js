@@ -2,7 +2,7 @@ import { INSTAGRAM_LOAD } from '../constants/ActionTypes';
 
 
 
-export default function faqs(state = [], action) {
+export default function images(state = [], action) {
   switch (action.type) {
     case INSTAGRAM_LOAD:
       return action.images;

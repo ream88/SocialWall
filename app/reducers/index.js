@@ -1,1 +1,1 @@
-export instagram from './instagram';
+export images from './images';
