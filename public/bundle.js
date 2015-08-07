@@ -37346,7 +37346,11 @@
 
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-	var _reducers = __webpack_require__(496);
+	var _middlewaresLogger = __webpack_require__(496);
+
+	var _middlewaresLogger2 = _interopRequireDefault(_middlewaresLogger);
+
+	var _reducers = __webpack_require__(497);
 
 	var reducers = _interopRequireWildcard(_reducers);
 
@@ -37355,7 +37359,7 @@
 	var InstagramActions = _interopRequireWildcard(_actionsInstagramActions);
 
 	var reducer = (0, _redux.combineReducers)(reducers);
-	var store = (0, _redux.applyMiddleware)(_reduxThunk2['default'])(_redux.createStore)(reducer);
+	var store = (0, _redux.applyMiddleware)(_middlewaresLogger2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
 
 	store.dispatch(InstagramActions.load('tags/nofilter/media/recent'));
 
@@ -43664,6 +43668,31 @@
 
 /***/ },
 /* 496 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+	var logger = function logger(store) {
+	  return function (next) {
+	    return function (action) {
+	      console.group(action.type);
+	      console.info('dispatching', action);
+	      var result = next(action);
+	      console.log('next state', store.getState());
+	      console.groupEnd(action.type);
+	      return result;
+	    };
+	  };
+	};
+
+	exports['default'] = logger;
+	module.exports = exports['default'];
+
+/***/ },
+/* 497 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43674,14 +43703,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _instagram2 = __webpack_require__(497);
+	var _instagram2 = __webpack_require__(498);
 
 	var _instagram3 = _interopRequireDefault(_instagram2);
 
 	exports.instagram = _instagram3['default'];
 
 /***/ },
-/* 497 */
+/* 498 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
