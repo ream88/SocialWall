@@ -13,8 +13,8 @@ export default class InstagramWall extends Component {
     return (
       <ul>
         {this.props.images.map(image =>
-          <li>
-            <img key={image.id} src={image.images.thumbnail.url} />
+          <li key={image.id}>
+            <img src={image.images.thumbnail.url} />
           </li>
         )}
       </ul>

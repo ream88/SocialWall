@@ -67,7 +67,7 @@
 
 	var _appContainersApp2 = _interopRequireDefault(_appContainersApp);
 
-	_reactDom2["default"].render(_react2["default"].createElement(_appContainersApp2["default"], null), document.body);
+	_reactDom2["default"].render(_react2["default"].createElement(_appContainersApp2["default"], null), document.querySelector('main'));
 
 /***/ },
 /* 2 */
@@ -37483,8 +37483,8 @@
 	        this.props.images.map(function (image) {
 	          return _react2['default'].createElement(
 	            'li',
-	            null,
-	            _react2['default'].createElement('img', { key: image.id, src: image.images.thumbnail.url })
+	            { key: image.id },
+	            _react2['default'].createElement('img', { src: image.images.thumbnail.url })
 	          );
 	        })
 	      );
