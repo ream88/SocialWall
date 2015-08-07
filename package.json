@@ -11,7 +11,6 @@
   "license": "MIT",
   "dependencies": {
     "jsonp": "^0.2.0",
-    "lodash": "^3.10.1",
     "react": "^0.14.0-beta3",
     "react-dom": "^0.14.0-beta3",
     "react-redux": "^0.2.2",

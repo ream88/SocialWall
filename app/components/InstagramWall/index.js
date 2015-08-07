@@ -1,7 +1,6 @@
 import styles from './index.css';
 
 import React, { Component, PropTypes } from 'react';
-import _ from 'lodash';
 
 
 export default class InstagramWall extends Component {
@@ -20,10 +19,7 @@ export default class InstagramWall extends Component {
 
 
   componentWillReceiveProps(props) {
-    let { images } = props;
-
-    images = _.sortByOrder(images, 'created_time', 'desc');
-    images = _.take(images, 5);
+    const { images } = props;
 
     this.setState({ images });
   }
