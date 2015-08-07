@@ -15,7 +15,7 @@ const reducer = combineReducers(reducers);
 const store = applyMiddleware(logger, autoScheduler, thunk)(createStore)(reducer);
 
 
-store.dispatch(InstagramActions.load('tags/nofilter/media/recent'));
+store.dispatch(InstagramActions.load('tags/flower/media/recent'));
 
 
 @provide(store)
