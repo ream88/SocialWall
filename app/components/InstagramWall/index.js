@@ -30,18 +30,27 @@ export default class InstagramWall extends Component {
 
 
   render() {
-    if(this.state.images.length == 0) return <div className={styles.Wall}></div>;
-
     return (
       <div className={styles.Wall}>
-        {this.state.images.map(image => {
-          const backgroundImage = `url(${image.images.standard_resolution.url})`;
+        {this.state.images.length == 0 ? '' : this.renderImages()}
+      </div>
+    );
+  }
 
-          return (
-            <div className={styles.ImageContainer} key={image.id} style={{ backgroundImage }}>
-            </div>
-          );
-        })}
+
+  renderImages() {
+    return this.state.images.map(image => this.renderImage(image));
+  }
+
+
+  renderImage(image) {
+    const backgroundImage = `url(${image.images.standard_resolution.url})`;
+
+    return (
+      <div
+        className={styles.ImageContainer}
+        key={image.id}
+        style={{ backgroundImage }}>
       </div>
     );
   }
