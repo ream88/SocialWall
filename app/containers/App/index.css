@@ -1,0 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+
+:global body {
+  font-family: 'Montserrat', sans-serif;
+}

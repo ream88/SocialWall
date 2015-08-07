@@ -1,8 +1,6 @@
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var definePlugin = new webpack.DefinePlugin({
-  CLIENT_ID: JSON.stringify(process.env.CLIENT_ID)
-});
 
 module.exports = {
   entry: ["./index.js"],
@@ -12,14 +10,17 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: "babel?stage=0" },
-      { test: /\.css$/, loader: "style!css!postcss" }
+      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader") },
+      { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel?stage=0&loose[]=es6.modules&loose[]=es6.classes" }
     ]
   },
   postcss: [
     require("autoprefixer-core")()
   ],
   plugins: [
-    definePlugin
+    new ExtractTextPlugin("style.css", { allChunks: true }),
+    new webpack.DefinePlugin({
+      CLIENT_ID: JSON.stringify(process.env.CLIENT_ID)
+    })
   ]
 };

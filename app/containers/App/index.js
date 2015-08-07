@@ -1,3 +1,5 @@
+import styles from './index.css';
+
 import React, { Component } from 'react';
 import InstagramApp from '../../containers/InstagramApp';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
