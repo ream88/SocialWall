@@ -1,0 +1,15 @@
+.Wall {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+
+.ImageContainer {
+  height: 100vh;
+  min-width: 50vw;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}

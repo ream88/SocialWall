@@ -37457,6 +37457,10 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var _indexCss = __webpack_require__(339);
+
+	var _indexCss2 = _interopRequireDefault(_indexCss);
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -37496,17 +37500,15 @@
 	  };
 
 	  InstagramWall.prototype.render = function render() {
-	    if (this.state.images.length == 0) return _react2['default'].createElement('ul', null);
+	    if (this.state.images.length == 0) return _react2['default'].createElement('div', { className: _indexCss2['default'].Wall });
 
 	    return _react2['default'].createElement(
-	      'ul',
-	      null,
+	      'div',
+	      { className: _indexCss2['default'].Wall },
 	      this.state.images.map(function (image) {
-	        return _react2['default'].createElement(
-	          'li',
-	          { key: image.id },
-	          _react2['default'].createElement('img', { src: image.images.thumbnail.url })
-	        );
+	        var backgroundImage = 'url(' + image.images.standard_resolution.url + ')';
+
+	        return _react2['default'].createElement('div', { className: _indexCss2['default'].ImageContainer, key: image.id, style: { backgroundImage: backgroundImage } });
 	      })
 	    );
 	  };
@@ -51698,7 +51700,7 @@
 	        case _constantsActionTypes2['default']:
 	          setInterval(function () {
 	            return next(action);
-	          }, 1000);
+	          }, 10000);
 
 	          return next(action);
 
@@ -51753,6 +51755,13 @@
 	}
 
 	module.exports = exports['default'];
+
+/***/ },
+/* 339 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+	module.exports = {"Wall":"index__Wall___1scWl","ImageContainer":"index__ImageContainer___aDqb9"};
 
 /***/ }
 /******/ ]);

@@ -1,3 +1,5 @@
+import styles from './index.css';
+
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 
@@ -28,16 +30,19 @@ export default class InstagramWall extends Component {
 
 
   render() {
-    if(this.state.images.length == 0) return <ul></ul>;
+    if(this.state.images.length == 0) return <div className={styles.Wall}></div>;
 
     return (
-      <ul>
-        {this.state.images.map(image =>
-          <li key={image.id}>
-            <img src={image.images.thumbnail.url} />
-          </li>
-        )}
-      </ul>
+      <div className={styles.Wall}>
+        {this.state.images.map(image => {
+          const backgroundImage = `url(${image.images.standard_resolution.url})`;
+
+          return (
+            <div className={styles.ImageContainer} key={image.id} style={{ backgroundImage }}>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }
