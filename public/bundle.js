@@ -37350,6 +37350,10 @@
 
 	var _middlewaresLogger2 = _interopRequireDefault(_middlewaresLogger);
 
+	var _middlewaresAutoScheduler = __webpack_require__(501);
+
+	var _middlewaresAutoScheduler2 = _interopRequireDefault(_middlewaresAutoScheduler);
+
 	var _reducers = __webpack_require__(499);
 
 	var reducers = _interopRequireWildcard(_reducers);
@@ -37359,7 +37363,7 @@
 	var InstagramActions = _interopRequireWildcard(_actionsInstagramActions);
 
 	var reducer = (0, _redux.combineReducers)(reducers);
-	var store = (0, _redux.applyMiddleware)(_middlewaresLogger2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
+	var store = (0, _redux.applyMiddleware)(_middlewaresLogger2['default'], _middlewaresAutoScheduler2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
 
 	store.dispatch(InstagramActions.load('tags/nofilter/media/recent'));
 
@@ -56128,6 +56132,44 @@
 	  }
 	}
 
+	module.exports = exports['default'];
+
+/***/ },
+/* 501 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	var _constantsActionTypes = __webpack_require__(316);
+
+	var _constantsActionTypes2 = _interopRequireDefault(_constantsActionTypes);
+
+	var autoScheduler = function autoScheduler(store) {
+	  return function (next) {
+	    return function (action) {
+	      switch (action.type) {
+	        case _constantsActionTypes2['default']:
+	          setInterval(function () {
+	            return next(action);
+	          }, 1000);
+
+	          return next(action);
+
+	          break;
+	        default:
+	          return next(action);
+	      }
+	    };
+	  };
+	};
+
+	exports['default'] = autoScheduler;
 	module.exports = exports['default'];
 
 /***/ }

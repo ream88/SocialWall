@@ -4,12 +4,13 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { provide } from 'react-redux';
 import thunk from 'redux-thunk';
 import logger from '../../middlewares/logger';
+import autoScheduler from '../../middlewares/autoScheduler';
 import * as reducers from '../../reducers';
 import * as InstagramActions from '../../actions/InstagramActions';
 
 
 const reducer = combineReducers(reducers);
-const store = applyMiddleware(logger, thunk)(createStore)(reducer);
+const store = applyMiddleware(logger, autoScheduler, thunk)(createStore)(reducer);
 
 
 store.dispatch(InstagramActions.load('tags/nofilter/media/recent'));
