@@ -43,6 +43,7 @@ Inspired by http://daneden.github.io/animate.css/
   .Slider--animated {
     composes: Slider;
 
+    -webkit-backface-visibility: hidden;
     animation-duration: 0.5s;
     animation-name: bounce;
   }

@@ -88,8 +88,8 @@ Inspired by http://daneden.github.io/animate.css/
 
   .index__Slider--animated___ppQv2 {
 
+    -webkit-backface-visibility: hidden;
     -webkit-animation-duration: 0.5s;
-
             animation-duration: 0.5s;
     -webkit-animation-name: index__bounce___3ANPo;
             animation-name: index__bounce___3ANPo;
