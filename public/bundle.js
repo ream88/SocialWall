@@ -19327,11 +19327,9 @@
 	var InstagramActions = _interopRequireWildcard(_actionsInstagramActions);
 
 	var reducer = _redux.combineReducers(reducers);
-	var store = _redux.applyMiddleware(_middlewaresLogger2['default'],
-	//autoScheduler,
-	_reduxThunk2['default'])(_redux.createStore)(reducer);
+	var store = _redux.applyMiddleware(_middlewaresLogger2['default'], _middlewaresAutoScheduler2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
 
-	store.dispatch(InstagramActions.load(("tags/flower/media/recent")));
+	store.dispatch(InstagramActions.load(("tags/nofilter/media/recent")));
 
 	var App = (function (_Component) {
 	  _inherits(App, _Component);
@@ -19396,7 +19394,7 @@
 	  InstagramApp.prototype.render = function render() {
 	    var images = this.props.images;
 
-	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (5) });
+	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (1) });
 	  };
 
 	  var _InstagramApp = InstagramApp;
@@ -19420,6 +19418,8 @@
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
@@ -19469,22 +19469,30 @@
 	  };
 
 	  InstagramWall.prototype.componentWillReceiveProps = function componentWillReceiveProps(props) {
-	    var images = props.images;
+	    var _this2 = this;
+
+	    var images = [].concat(_toConsumableArray(this.state.images), _toConsumableArray(props.images.filter(function (newImage) {
+	      return !_this2.state.images.some(function (image) {
+	        return image.id === newImage.id;
+	      });
+	    })));
 
 	    this.setState({ images: images });
 	  };
 
 	  InstagramWall.prototype.next = function next() {
-	    var _this2 = this;
+	    var _this3 = this;
 
 	    this.setState({ sliding: true });
 
 	    setTimeout(function () {
 	      requestAnimationFrame(function () {
-	        var images = _this2.state.images;
-	        images.push(images.shift());
+	        var images = _this3.state.images;
+	        var movingImage = images.shift();
 
-	        _this2.setState({ images: images, sliding: false });
+	        if (images.length <= 5) images.push(movingImage);
+
+	        _this3.setState({ images: images, sliding: false });
 	      });
 	    }, 500);
 	  };
@@ -19502,10 +19510,10 @@
 	  };
 
 	  InstagramWall.prototype.renderImages = function renderImages() {
-	    var _this3 = this;
+	    var _this4 = this;
 
 	    return this.state.images.map(function (image) {
-	      return _this3.renderImage(image);
+	      return _this4.renderImage(image);
 	    });
 	  };
 
@@ -21338,7 +21346,7 @@
 	        case _constantsActionTypes2['default']:
 	          setInterval(function () {
 	            return next(action);
-	          }, 10000);
+	          }, (1) * 1000);
 	          return next(action);
 
 	        default:

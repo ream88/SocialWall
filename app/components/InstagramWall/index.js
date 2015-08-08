@@ -31,7 +31,10 @@ export default class InstagramWall extends Component {
 
 
   componentWillReceiveProps(props) {
-    const { images } = props;
+    const images = [
+      ...this.state.images,
+      ...props.images.filter(newImage => !this.state.images.some(image => image.id === newImage.id))
+    ];
 
     this.setState({ images });
   }
@@ -42,8 +45,10 @@ export default class InstagramWall extends Component {
 
     setTimeout(() => {
       requestAnimationFrame(() => {
-        let images = this.state.images;
-        images.push(images.shift());
+        const images = this.state.images;
+        const movingImage = images.shift();
+
+        if(images.length <= 5) images.push(movingImage);
 
         this.setState({ images, sliding: false });
       })
