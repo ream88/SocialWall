@@ -14,7 +14,7 @@ import * as InstagramActions from '../../actions/InstagramActions';
 const reducer = combineReducers(reducers);
 const store = applyMiddleware(
   logger,
-  autoScheduler,
+  //autoScheduler,
   thunk
 )(createStore)(reducer);
 

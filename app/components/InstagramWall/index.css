@@ -2,8 +2,109 @@
   width: 100vw;
   height: 100vh;
 
+  overflow: hidden;
+}
+
+
+.Slider {
   display: flex;
 }
+
+
+  .Slider--animated {
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+  .Slider--position0 {
+    composes: Slider;
+
+    transform: translateX(0);
+  }
+
+
+  .Slider--position1 {
+    composes: Slider;
+
+    transform: translateX(-50vw);
+  }
+
+
+  .Slider--position2 {
+    composes: Slider;
+
+    transform: translateX(-100vw);
+  }
+
+
+  .Slider--position3 {
+    composes: Slider;
+
+    transform: translateX(-150vw);
+  }
+
+
+  .Slider--position4 {
+    composes: Slider;
+
+    transform: translateX(-200vw);
+  }
+
+
+  .Slider--position5 {
+    composes: Slider;
+
+    transform: translateX(-200vw);
+  }
+
+
+  .Slider--position6 {
+    composes: Slider;
+
+    transform: translateX(-200vw);
+  }
+
+
+  .Slider--position0-animated {
+    composes: Slider--position0;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position1-animated {
+    composes: Slider--position1;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position2-animated {
+    composes: Slider--position2;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position3-animated {
+    composes: Slider--position3;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position4-animated {
+    composes: Slider--position4;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position5-animated {
+    composes: Slider--position5;
+    composes: Slider--animated;
+  }
+
+
+  .Slider--position6-animated {
+    composes: Slider--position6;
+    composes: Slider--animated;
+  }
 
 
 .ImageContainer {
