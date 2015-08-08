@@ -1,6 +1,6 @@
-import styles from './index.css';
+import styles from "./index.css";
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 
 export default class InstagramWall extends Component {
@@ -59,8 +59,8 @@ export default class InstagramWall extends Component {
   render() {
     return (
       <div className={styles.Wall}>
-        <div className={styles[this.state.sliding ? 'Slider--animated' : 'Slider--not-animated']}>
-          {this.state.images.length == 0 ? '' : this.renderImages()}
+        <div className={styles[this.state.sliding ? "Slider--animated" : "Slider--not-animated"]}>
+          {this.state.images.length == 0 ? "" : this.renderImages()}
         </div>
       </div>
     );

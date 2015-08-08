@@ -19278,17 +19278,17 @@
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj["default"] = obj; return newObj; } }
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _indexCss = __webpack_require__(158);
 
@@ -19327,9 +19327,9 @@
 	var InstagramActions = _interopRequireWildcard(_actionsInstagramActions);
 
 	var reducer = _redux.combineReducers(reducers);
-	var store = _redux.applyMiddleware(_middlewaresLogger2['default'], _middlewaresAutoScheduler2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
+	var store = _redux.applyMiddleware(_middlewaresLogger2["default"], _middlewaresAutoScheduler2["default"], _reduxThunk2["default"])(_redux.createStore)(reducer);
 
-	store.dispatch(InstagramActions.load('tags/' + ("flower") + '/media/recent'));
+	store.dispatch(InstagramActions.load("tags/" + ("flower") + "/media/recent"));
 
 	var App = (function (_Component) {
 	  _inherits(App, _Component);
@@ -19341,7 +19341,7 @@
 	  }
 
 	  App.prototype.render = function render() {
-	    return _react2['default'].createElement(_containersInstagramApp2['default'], null);
+	    return _react2["default"].createElement(_containersInstagramApp2["default"], null);
 	  };
 
 	  var _App = App;
@@ -19349,8 +19349,8 @@
 	  return App;
 	})(_react.Component);
 
-	exports['default'] = App;
-	module.exports = exports['default'];
+	exports["default"] = App;
+	module.exports = exports["default"];
 
 /***/ },
 /* 158 */
@@ -19362,15 +19362,15 @@
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj["default"] = obj; return newObj; } }
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var _react = __webpack_require__(2);
 
@@ -19398,11 +19398,11 @@
 	  InstagramApp.prototype.render = function render() {
 	    var images = this.props.images;
 
-	    return _react2['default'].createElement(
-	      'div',
+	    return _react2["default"].createElement(
+	      "div",
 	      null,
-	      _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (5) }),
-	      _react2['default'].createElement(_componentsOverlay2['default'], { hashtag: ("flower") })
+	      _react2["default"].createElement(_componentsInstagramWall2["default"], { images: images, interval: (5) }),
+	      _react2["default"].createElement(_componentsOverlay2["default"], { hashtag: ("flower") })
 	    );
 	  };
 
@@ -19413,26 +19413,26 @@
 	  return InstagramApp;
 	})();
 
-	exports['default'] = InstagramApp;
-	module.exports = exports['default'];
+	exports["default"] = InstagramApp;
+	module.exports = exports["default"];
 
 /***/ },
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _indexCss = __webpack_require__(161);
 
@@ -19446,7 +19446,7 @@
 	  _inherits(InstagramWall, _Component);
 
 	  _createClass(InstagramWall, null, [{
-	    key: 'propTypes',
+	    key: "propTypes",
 	    value: {
 	      images: _react.PropTypes.array.isRequired,
 	      interval: _react.PropTypes.number.isRequired
@@ -19507,13 +19507,13 @@
 	  };
 
 	  InstagramWall.prototype.render = function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: _indexCss2['default'].Wall },
-	      _react2['default'].createElement(
-	        'div',
-	        { className: _indexCss2['default'][this.state.sliding ? 'Slider--animated' : 'Slider--not-animated'] },
-	        this.state.images.length == 0 ? '' : this.renderImages()
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: _indexCss2["default"].Wall },
+	      _react2["default"].createElement(
+	        "div",
+	        { className: _indexCss2["default"][this.state.sliding ? "Slider--animated" : "Slider--not-animated"] },
+	        this.state.images.length == 0 ? "" : this.renderImages()
 	      )
 	    );
 	  };
@@ -19527,10 +19527,10 @@
 	  };
 
 	  InstagramWall.prototype.renderImage = function renderImage(image) {
-	    var backgroundImage = 'url(' + image.images.standard_resolution.url + ')';
+	    var backgroundImage = "url(" + image.images.standard_resolution.url + ")";
 
-	    return _react2['default'].createElement('div', {
-	      className: _indexCss2['default'].ImageContainer,
+	    return _react2["default"].createElement("div", {
+	      className: _indexCss2["default"].ImageContainer,
 	      key: image.id,
 	      style: { backgroundImage: backgroundImage } });
 	  };
@@ -19538,8 +19538,8 @@
 	  return InstagramWall;
 	})(_react.Component);
 
-	exports['default'] = InstagramWall;
-	module.exports = exports['default'];
+	exports["default"] = InstagramWall;
+	module.exports = exports["default"];
 
 /***/ },
 /* 161 */
@@ -19552,17 +19552,17 @@
 /* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _indexCss = __webpack_require__(163);
 
@@ -19582,20 +19582,20 @@
 	  }
 
 	  Overlay.prototype.render = function render() {
-	    return _react2['default'].createElement(
-	      'div',
-	      { className: _indexCss2['default'].Overlay },
-	      _react2['default'].createElement(
-	        'h1',
-	        { className: _indexCss2['default'].Hashtag },
-	        '#',
+	    return _react2["default"].createElement(
+	      "div",
+	      { className: _indexCss2["default"].Overlay },
+	      _react2["default"].createElement(
+	        "h1",
+	        { className: _indexCss2["default"].Hashtag },
+	        "#",
 	        this.props.hashtag
 	      )
 	    );
 	  };
 
 	  _createClass(Overlay, null, [{
-	    key: 'propTypes',
+	    key: "propTypes",
 	    value: {
 	      hashtag: _react.PropTypes.string.isRequired
 	    },
@@ -19605,8 +19605,8 @@
 	  return Overlay;
 	})(_react.Component);
 
-	exports['default'] = Overlay;
-	module.exports = exports['default'];
+	exports["default"] = Overlay;
+	module.exports = exports["default"];
 
 /***/ },
 /* 163 */
@@ -20236,12 +20236,12 @@
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 	exports.load = load;
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	var _constantsActionTypes = __webpack_require__(177);
 
@@ -20250,10 +20250,10 @@
 	var _jsonp2 = _interopRequireDefault(_jsonp);
 
 	function load() {
-	  var what = arguments.length <= 0 || arguments[0] === undefined ? 'media/popular' : arguments[0];
+	  var what = arguments.length <= 0 || arguments[0] === undefined ? "media/popular" : arguments[0];
 
 	  return function (dispatch) {
-	    return _jsonp2['default']('https://api.instagram.com/v1/' + what + '?client_id=' + ("8b734234f2b14961afeed28b305a9e1a") + '&count=5', {}, function (_, json) {
+	    return _jsonp2["default"]("https://api.instagram.com/v1/" + what + "?client_id=" + ("8b734234f2b14961afeed28b305a9e1a") + "&count=5", {}, function (_, json) {
 	      return dispatch({ type: _constantsActionTypes.INSTAGRAM_LOAD, images: json.data });
 	    });
 	  };
@@ -20263,10 +20263,10 @@
 /* 177 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
-	var INSTAGRAM_LOAD = 'INSTAGRAM_LOAD';
+	var INSTAGRAM_LOAD = "INSTAGRAM_LOAD";
 	exports.INSTAGRAM_LOAD = INSTAGRAM_LOAD;
 
 /***/ },
@@ -21382,34 +21382,34 @@
 /* 195 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 	var logger = function logger(store) {
 	  return function (next) {
 	    return function (action) {
 	      console.group(action.type);
-	      console.info('dispatching', action);
+	      console.info("dispatching", action);
 	      var result = next(action);
-	      console.log('next state', store.getState());
+	      console.log("next state", store.getState());
 	      console.groupEnd(action.type);
 	      return result;
 	    };
 	  };
 	};
 
-	exports['default'] = logger;
-	module.exports = exports['default'];
+	exports["default"] = logger;
+	module.exports = exports["default"];
 
 /***/ },
 /* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	var _constantsActionTypes = __webpack_require__(177);
 
@@ -21419,7 +21419,7 @@
 	  return function (next) {
 	    return function (action) {
 	      switch (action.type) {
-	        case _constantsActionTypes2['default']:
+	        case _constantsActionTypes2["default"]:
 	          setInterval(function () {
 	            return next(action);
 	          }, (5) * 1000);
@@ -21432,33 +21432,33 @@
 	  };
 	};
 
-	exports['default'] = autoScheduler;
-	module.exports = exports['default'];
+	exports["default"] = autoScheduler;
+	module.exports = exports["default"];
 
 /***/ },
 /* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 	var _images2 = __webpack_require__(198);
 
 	var _images3 = _interopRequireDefault(_images2);
 
-	exports.images = _images3['default'];
+	exports.images = _images3["default"];
 
 /***/ },
 /* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
-	exports['default'] = images;
+	exports["default"] = images;
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
@@ -21487,7 +21487,7 @@
 	  }
 	}
 
-	module.exports = exports['default'];
+	module.exports = exports["default"];
 
 /***/ }
 /******/ ]);

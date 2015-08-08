@@ -1,14 +1,14 @@
-import styles from './index.css';
+import styles from "./index.css";
 
-import React, { Component } from 'react';
-import InstagramApp from '../../containers/InstagramApp';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { provide } from 'react-redux';
-import thunk from 'redux-thunk';
-import logger from '../../middlewares/logger';
-import autoScheduler from '../../middlewares/autoScheduler';
-import * as reducers from '../../reducers';
-import * as InstagramActions from '../../actions/InstagramActions';
+import React, { Component } from "react";
+import InstagramApp from "../../containers/InstagramApp";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import { provide } from "react-redux";
+import thunk from "redux-thunk";
+import logger from "../../middlewares/logger";
+import autoScheduler from "../../middlewares/autoScheduler";
+import * as reducers from "../../reducers";
+import * as InstagramActions from "../../actions/InstagramActions";
 
 
 const reducer = combineReducers(reducers);

@@ -1,6 +1,6 @@
-import styles from './index.css';
+import styles from "./index.css";
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from "react";
 
 
 export default class Overlay extends Component {

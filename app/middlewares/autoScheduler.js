@@ -1,4 +1,4 @@
-import INSTAGRAM_LOAD from '../constants/ActionTypes';
+import INSTAGRAM_LOAD from "../constants/ActionTypes";
 
 
 const autoScheduler = store => next => action => {
