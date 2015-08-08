@@ -19396,7 +19396,7 @@
 	  InstagramApp.prototype.render = function render() {
 	    var images = this.props.images;
 
-	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images });
+	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: 5 });
 	  };
 
 	  var _InstagramApp = InstagramApp;
@@ -19439,7 +19439,8 @@
 	  _createClass(InstagramWall, null, [{
 	    key: 'propTypes',
 	    value: {
-	      images: _react.PropTypes.array.isRequired
+	      images: _react.PropTypes.array.isRequired,
+	      interval: _react.PropTypes.number.isRequired
 	    },
 	    enumerable: true
 	  }]);
@@ -19455,6 +19456,18 @@
 	    };
 	  }
 
+	  InstagramWall.prototype.componentDidMount = function componentDidMount() {
+	    var _this = this;
+
+	    this.interval = setInterval(function () {
+	      return _this.next();
+	    }, this.props.interval * 1000);
+	  };
+
+	  InstagramWall.prototype.componentWillUnmount = function componentWillUnmount() {
+	    clearInterval(this.interval);
+	  };
+
 	  InstagramWall.prototype.componentWillReceiveProps = function componentWillReceiveProps(props) {
 	    var images = props.images;
 
@@ -19462,16 +19475,16 @@
 	  };
 
 	  InstagramWall.prototype.next = function next() {
-	    var _this = this;
+	    var _this2 = this;
 
 	    this.setState({ sliding: true });
 
 	    setTimeout(function () {
 	      requestAnimationFrame(function () {
-	        var images = _this.state.images;
+	        var images = _this2.state.images;
 	        images.push(images.shift());
 
-	        _this.setState({ images: images, sliding: false });
+	        _this2.setState({ images: images, sliding: false });
 	      });
 	    }, 500);
 	  };
@@ -19479,7 +19492,7 @@
 	  InstagramWall.prototype.render = function render() {
 	    return _react2['default'].createElement(
 	      'div',
-	      { className: _indexCss2['default'].Wall, onClick: this.next.bind(this) },
+	      { className: _indexCss2['default'].Wall },
 	      _react2['default'].createElement(
 	        'div',
 	        { className: _indexCss2['default'][this.state.sliding ? 'Slider--animated' : 'Slider--not-animated'] },
@@ -19489,10 +19502,10 @@
 	  };
 
 	  InstagramWall.prototype.renderImages = function renderImages() {
-	    var _this2 = this;
+	    var _this3 = this;
 
 	    return this.state.images.map(function (image) {
-	      return _this2.renderImage(image);
+	      return _this3.renderImage(image);
 	    });
 	  };
 

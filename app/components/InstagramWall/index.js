@@ -5,7 +5,8 @@ import React, { Component, PropTypes } from 'react';
 
 export default class InstagramWall extends Component {
   static propTypes = {
-    images: PropTypes.array.isRequired
+    images: PropTypes.array.isRequired,
+    interval: PropTypes.number.isRequired
   }
 
 
@@ -16,6 +17,16 @@ export default class InstagramWall extends Component {
       images: [],
       sliding: false
     }
+  }
+
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.next(), this.props.interval * 1000);
+  }
+
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
 
@@ -42,7 +53,7 @@ export default class InstagramWall extends Component {
 
   render() {
     return (
-      <div className={styles.Wall} onClick={::this.next}>
+      <div className={styles.Wall}>
         <div className={styles[this.state.sliding ? 'Slider--animated' : 'Slider--not-animated']}>
           {this.state.images.length == 0 ? '' : this.renderImages()}
         </div>
