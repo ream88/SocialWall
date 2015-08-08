@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Montserrat);body {
+@import url(http://fonts.googleapis.com/css?family=Forum);body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Forum', cursive;
 }
 .index__Wall___1scWl {
   width: 100vw;
@@ -48,4 +48,44 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.index__Overlay___1fUrc {
+  height: 100vh;
+  width: 100vw;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: -webkit-box;
+
+  display: -webkit-flex;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+
+.index__Hashtag___1GLlD {
+  margin: 0;
+  margin-bottom: 3px;
+  padding: 10px 20px;
+
+  border-top-left-radius: 3.5px;
+  border-top-right-radius: 3.5px;
+
+  -webkit-box-shadow: #fee3c7 0 3px;
+  background-color: #fff4e8;
+  color: #303e49;
+  font-size: 25px;
+  font-weight: normal;
 }
