@@ -19331,7 +19331,7 @@
 	//autoScheduler,
 	_reduxThunk2['default'])(_redux.createStore)(reducer);
 
-	store.dispatch(InstagramActions.load('tags/flower/media/recent'));
+	store.dispatch(InstagramActions.load(("tags/flower/media/recent")));
 
 	var App = (function (_Component) {
 	  _inherits(App, _Component);
@@ -19396,7 +19396,7 @@
 	  InstagramApp.prototype.render = function render() {
 	    var images = this.props.images;
 
-	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: 5 });
+	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (5) });
 	  };
 
 	  var _InstagramApp = InstagramApp;

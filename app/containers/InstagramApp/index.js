@@ -10,7 +10,7 @@ export default class InstagramApp {
     const { images } = this.props;
 
     return (
-      <InstagramWall images={images} interval={5} />
+      <InstagramWall images={images} interval={INTERVAL} />
     );
   }
 }

@@ -20,7 +20,9 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin("style.css", { allChunks: true }),
     new webpack.DefinePlugin({
-      CLIENT_ID: JSON.stringify(process.env.CLIENT_ID)
+      CLIENT_ID: JSON.stringify(process.env.CLIENT_ID),
+      INTERVAL: process.env.INTERVAL || 5,
+      QUERY: JSON.stringify(process.env.QUERY)
     })
   ]
 };

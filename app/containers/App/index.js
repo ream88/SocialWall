@@ -19,7 +19,7 @@ const store = applyMiddleware(
 )(createStore)(reducer);
 
 
-store.dispatch(InstagramActions.load('tags/flower/media/recent'));
+store.dispatch(InstagramActions.load(QUERY));
 
 
 @provide(store)
