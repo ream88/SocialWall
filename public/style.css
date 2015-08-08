@@ -19,25 +19,88 @@
   display: flex;
 }
 
+/*
+Inspired by http://daneden.github.io/animate.css/
+*/
+@-webkit-keyframes index__bounce___3ANPo {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+            transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+  }
+
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  40% {
+    -webkit-transform: translate3d(2vw, 0, 0);
+            transform: translate3d(2vw, 0, 0);
+  }
+
+  70% {
+    -webkit-transform: translate3d(-51vw, 0, 0);
+            transform: translate3d(-51vw, 0, 0);
+  }
+
+  85% {
+    -webkit-transform: translate3d(-49.5vw, 0, 0);
+            transform: translate3d(-49.5vw, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50vw, 0, 0);
+            transform: translate3d(-50vw, 0, 0);
+  }
+}
+@keyframes index__bounce___3ANPo {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+            transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
+  }
+
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  40% {
+    -webkit-transform: translate3d(2vw, 0, 0);
+            transform: translate3d(2vw, 0, 0);
+  }
+
+  70% {
+    -webkit-transform: translate3d(-51vw, 0, 0);
+            transform: translate3d(-51vw, 0, 0);
+  }
+
+  85% {
+    -webkit-transform: translate3d(-49.5vw, 0, 0);
+            transform: translate3d(-49.5vw, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(-50vw, 0, 0);
+            transform: translate3d(-50vw, 0, 0);
+  }
+}
+
 
   .index__Slider--animated___ppQv2 {
 
-    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    -webkit-animation-duration: 0.5s;
 
-            transition: transform 0.5s ease-in-out;
-    -webkit-transform: translateX(-50vw);
-        -ms-transform: translateX(-50vw);
-            transform: translateX(-50vw);
+            animation-duration: 0.5s;
+    -webkit-animation-name: index__bounce___3ANPo;
+            animation-name: index__bounce___3ANPo;
   }
 
 
   .index__Slider--not-animated___1AU7H {
 
-    -webkit-transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
 
-        -ms-transform: translateX(0);
-
-            transform: translateX(0);
+            transform: translate3d(0, 0, 0);
   }
 
 

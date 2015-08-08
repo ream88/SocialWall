@@ -19546,7 +19546,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","Slider--animated":"index__Slider--animated___ppQv2 index__Slider___3bho0","Slider--not-animated":"index__Slider--not-animated___1AU7H index__Slider___3bho0","ImageContainer":"index__ImageContainer___aDqb9"};
+	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","Slider--animated":"index__Slider--animated___ppQv2 index__Slider___3bho0","bounce":"index__bounce___3ANPo","Slider--not-animated":"index__Slider--not-animated___1AU7H index__Slider___3bho0","ImageContainer":"index__ImageContainer___aDqb9"};
 
 /***/ },
 /* 162 */
