@@ -21,106 +21,23 @@
 
 
   .index__Slider--animated___ppQv2 {
+
     -webkit-transition: -webkit-transform 0.5s ease-in-out;
+
             transition: transform 0.5s ease-in-out;
+    -webkit-transform: translateX(-50vw);
+        -ms-transform: translateX(-50vw);
+            transform: translateX(-50vw);
   }
 
 
-  .index__Slider--position0___3yllM {
+  .index__Slider--not-animated___1AU7H {
 
     -webkit-transform: translateX(0);
 
         -ms-transform: translateX(0);
 
             transform: translateX(0);
-  }
-
-
-  .index__Slider--position1___2LlcX {
-
-    -webkit-transform: translateX(-50vw);
-
-        -ms-transform: translateX(-50vw);
-
-            transform: translateX(-50vw);
-  }
-
-
-  .index__Slider--position2___112e7 {
-
-    -webkit-transform: translateX(-100vw);
-
-        -ms-transform: translateX(-100vw);
-
-            transform: translateX(-100vw);
-  }
-
-
-  .index__Slider--position3___311Ve {
-
-    -webkit-transform: translateX(-150vw);
-
-        -ms-transform: translateX(-150vw);
-
-            transform: translateX(-150vw);
-  }
-
-
-  .index__Slider--position4___Q2bQx {
-
-    -webkit-transform: translateX(-200vw);
-
-        -ms-transform: translateX(-200vw);
-
-            transform: translateX(-200vw);
-  }
-
-
-  .index__Slider--position5___3ZD2m {
-
-    -webkit-transform: translateX(-200vw);
-
-        -ms-transform: translateX(-200vw);
-
-            transform: translateX(-200vw);
-  }
-
-
-  .index__Slider--position6___aVANO {
-
-    -webkit-transform: translateX(-200vw);
-
-        -ms-transform: translateX(-200vw);
-
-            transform: translateX(-200vw);
-  }
-
-
-  .index__Slider--position0-animated___2tgi0 {
-  }
-
-
-  .index__Slider--position1-animated___2hvQF {
-  }
-
-
-  .index__Slider--position2-animated___1jgI4 {
-  }
-
-
-  .index__Slider--position3-animated___34Hzq {
-  }
-
-
-  .index__Slider--position4-animated___3Fcnh {
-  }
-
-
-  .index__Slider--position5-animated___3WNIu {
-  }
-
-
-  .index__Slider--position6-animated___y3nXF {
   }
 
 

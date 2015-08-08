@@ -14,7 +14,7 @@ export default class InstagramWall extends Component {
 
     this.state = {
       images: [],
-      position: 0
+      sliding: false
     }
   }
 
@@ -27,16 +27,23 @@ export default class InstagramWall extends Component {
 
 
   next() {
-    let position = this.state.position + 1 == this.state.images.length - 1 ? 0 : this.state.position + 1;
+    this.setState({ sliding: true });
 
-    this.setState({ position });
+    setTimeout(() => {
+      requestAnimationFrame(() => {
+        let images = this.state.images;
+        images.push(images.shift());
+
+        this.setState({ images, sliding: false });
+      })
+    }, 500);
   }
 
 
   render() {
     return (
       <div className={styles.Wall} onClick={::this.next}>
-        <div className={styles[`Slider--position${this.state.position}-animated`]}>
+        <div className={styles[this.state.sliding ? 'Slider--animated' : 'Slider--not-animated']}>
           {this.state.images.length == 0 ? '' : this.renderImages()}
         </div>
       </div>

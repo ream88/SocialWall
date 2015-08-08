@@ -19451,7 +19451,7 @@
 
 	    this.state = {
 	      images: [],
-	      position: 0
+	      sliding: false
 	    };
 	  }
 
@@ -19462,9 +19462,18 @@
 	  };
 
 	  InstagramWall.prototype.next = function next() {
-	    var position = this.state.position + 1 == this.state.images.length - 1 ? 0 : this.state.position + 1;
+	    var _this = this;
 
-	    this.setState({ position: position });
+	    this.setState({ sliding: true });
+
+	    setTimeout(function () {
+	      requestAnimationFrame(function () {
+	        var images = _this.state.images;
+	        images.push(images.shift());
+
+	        _this.setState({ images: images, sliding: false });
+	      });
+	    }, 500);
 	  };
 
 	  InstagramWall.prototype.render = function render() {
@@ -19473,17 +19482,17 @@
 	      { className: _indexCss2['default'].Wall, onClick: this.next.bind(this) },
 	      _react2['default'].createElement(
 	        'div',
-	        { className: _indexCss2['default']['Slider--position' + this.state.position + '-animated'] },
+	        { className: _indexCss2['default'][this.state.sliding ? 'Slider--animated' : 'Slider--not-animated'] },
 	        this.state.images.length == 0 ? '' : this.renderImages()
 	      )
 	    );
 	  };
 
 	  InstagramWall.prototype.renderImages = function renderImages() {
-	    var _this = this;
+	    var _this2 = this;
 
 	    return this.state.images.map(function (image) {
-	      return _this.renderImage(image);
+	      return _this2.renderImage(image);
 	    });
 	  };
 
@@ -19507,7 +19516,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","Slider--animated":"index__Slider--animated___ppQv2","Slider--position0":"index__Slider--position0___3yllM index__Slider___3bho0","Slider--position1":"index__Slider--position1___2LlcX index__Slider___3bho0","Slider--position2":"index__Slider--position2___112e7 index__Slider___3bho0","Slider--position3":"index__Slider--position3___311Ve index__Slider___3bho0","Slider--position4":"index__Slider--position4___Q2bQx index__Slider___3bho0","Slider--position5":"index__Slider--position5___3ZD2m index__Slider___3bho0","Slider--position6":"index__Slider--position6___aVANO index__Slider___3bho0","Slider--position0-animated":"index__Slider--position0-animated___2tgi0 index__Slider--position0___3yllM index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position1-animated":"index__Slider--position1-animated___2hvQF index__Slider--position1___2LlcX index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position2-animated":"index__Slider--position2-animated___1jgI4 index__Slider--position2___112e7 index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position3-animated":"index__Slider--position3-animated___34Hzq index__Slider--position3___311Ve index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position4-animated":"index__Slider--position4-animated___3Fcnh index__Slider--position4___Q2bQx index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position5-animated":"index__Slider--position5-animated___3WNIu index__Slider--position5___3ZD2m index__Slider___3bho0 index__Slider--animated___ppQv2","Slider--position6-animated":"index__Slider--position6-animated___y3nXF index__Slider--position6___aVANO index__Slider___3bho0 index__Slider--animated___ppQv2","ImageContainer":"index__ImageContainer___aDqb9"};
+	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","Slider--animated":"index__Slider--animated___ppQv2 index__Slider___3bho0","Slider--not-animated":"index__Slider--not-animated___1AU7H index__Slider___3bho0","ImageContainer":"index__ImageContainer___aDqb9"};
 
 /***/ },
 /* 162 */
