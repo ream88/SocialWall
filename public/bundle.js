@@ -21471,7 +21471,7 @@
 	    case _constantsActionTypes.INSTAGRAM_LOAD:
 	      var newState = action.images;
 
-	      if (state.length == 0) return newState;
+	      if (state.length === 0) return newState;
 
 	      // Filter all images which already exist in state.
 	      newState = newState.filter(function (newImage) {
