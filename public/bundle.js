@@ -19329,7 +19329,7 @@
 	var reducer = _redux.combineReducers(reducers);
 	var store = _redux.applyMiddleware(_middlewaresLogger2['default'], _middlewaresAutoScheduler2['default'], _reduxThunk2['default'])(_redux.createStore)(reducer);
 
-	store.dispatch(InstagramActions.load(("tags/nofilter/media/recent")));
+	store.dispatch(InstagramActions.load('tags/' + ("flower") + '/media/recent'));
 
 	var App = (function (_Component) {
 	  _inherits(App, _Component);
@@ -19394,7 +19394,7 @@
 	  InstagramApp.prototype.render = function render() {
 	    var images = this.props.images;
 
-	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (1) });
+	    return _react2['default'].createElement(_componentsInstagramWall2['default'], { images: images, interval: (5) });
 	  };
 
 	  var _InstagramApp = InstagramApp;
@@ -21346,7 +21346,7 @@
 	        case _constantsActionTypes2['default']:
 	          setInterval(function () {
 	            return next(action);
-	          }, (1) * 1000);
+	          }, (5) * 1000);
 	          return next(action);
 
 	        default:

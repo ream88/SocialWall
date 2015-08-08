@@ -22,7 +22,7 @@ module.exports = {
     new webpack.DefinePlugin({
       CLIENT_ID: JSON.stringify(process.env.CLIENT_ID),
       INTERVAL: process.env.INTERVAL || 5,
-      QUERY: JSON.stringify(process.env.QUERY)
+      HASHTAG: JSON.stringify(process.env.HASHTAG)
     })
   ]
 };

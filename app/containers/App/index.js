@@ -19,7 +19,7 @@ const store = applyMiddleware(
 )(createStore)(reducer);
 
 
-store.dispatch(InstagramActions.load(QUERY));
+store.dispatch(InstagramActions.load(`tags/${HASHTAG}/media/recent`));
 
 
 @provide(store)
