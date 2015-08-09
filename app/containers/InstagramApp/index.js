@@ -1,5 +1,5 @@
 import React from "react";
-import InstagramWall from "../../components/InstagramWall";
+import Slider from "../../components/Slider";
 import Overlay from "../../components/Overlay";
 import { connect } from "react-redux";
 import * as InstagramActions from "../../actions/InstagramActions";
@@ -12,7 +12,7 @@ export default class InstagramApp {
 
     return (
       <div>
-        <InstagramWall images={images} interval={INTERVAL} />
+        <Slider images={images} interval={INTERVAL} />
         <Overlay hashtag={HASHTAG} />
       </div>
     );

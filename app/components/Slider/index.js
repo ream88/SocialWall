@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import ReactTransitionEvents from "react/lib/ReactTransitionEvents";
 
 
-export default class InstagramWall extends Component {
+export default class Slider extends Component {
   static propTypes = {
     images: PropTypes.array.isRequired,
     interval: PropTypes.number.isRequired

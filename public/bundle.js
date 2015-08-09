@@ -19376,9 +19376,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _componentsInstagramWall = __webpack_require__(160);
+	var _componentsSlider = __webpack_require__(160);
 
-	var _componentsInstagramWall2 = _interopRequireDefault(_componentsInstagramWall);
+	var _componentsSlider2 = _interopRequireDefault(_componentsSlider);
 
 	var _componentsOverlay = __webpack_require__(163);
 
@@ -19401,7 +19401,7 @@
 	    return _react2["default"].createElement(
 	      "div",
 	      null,
-	      _react2["default"].createElement(_componentsInstagramWall2["default"], { images: images, interval: (5) }),
+	      _react2["default"].createElement(_componentsSlider2["default"], { images: images, interval: (5) }),
 	      _react2["default"].createElement(_componentsOverlay2["default"], { hashtag: ("flower") })
 	    );
 	  };
@@ -19450,10 +19450,10 @@
 
 	var _reactLibReactTransitionEvents2 = _interopRequireDefault(_reactLibReactTransitionEvents);
 
-	var InstagramWall = (function (_Component) {
-	  _inherits(InstagramWall, _Component);
+	var Slider = (function (_Component) {
+	  _inherits(Slider, _Component);
 
-	  _createClass(InstagramWall, null, [{
+	  _createClass(Slider, null, [{
 	    key: "propTypes",
 	    value: {
 	      images: _react.PropTypes.array.isRequired,
@@ -19462,8 +19462,8 @@
 	    enumerable: true
 	  }]);
 
-	  function InstagramWall(props) {
-	    _classCallCheck(this, InstagramWall);
+	  function Slider(props) {
+	    _classCallCheck(this, Slider);
 
 	    _Component.call(this, props);
 
@@ -19473,7 +19473,7 @@
 	    };
 	  }
 
-	  InstagramWall.prototype.componentDidMount = function componentDidMount() {
+	  Slider.prototype.componentDidMount = function componentDidMount() {
 	    var _this = this;
 
 	    this.interval = setInterval(function () {
@@ -19481,11 +19481,11 @@
 	    }, this.props.interval * 1000);
 	  };
 
-	  InstagramWall.prototype.componentWillUnmount = function componentWillUnmount() {
+	  Slider.prototype.componentWillUnmount = function componentWillUnmount() {
 	    clearInterval(this.interval);
 	  };
 
-	  InstagramWall.prototype.componentWillReceiveProps = function componentWillReceiveProps(props) {
+	  Slider.prototype.componentWillReceiveProps = function componentWillReceiveProps(props) {
 	    var _this2 = this;
 
 	    var images = [].concat(_toConsumableArray(this.state.images), _toConsumableArray(props.images.filter(function (newImage) {
@@ -19497,7 +19497,7 @@
 	    this.setState({ images: images });
 	  };
 
-	  InstagramWall.prototype.next = function next() {
+	  Slider.prototype.next = function next() {
 	    var _this3 = this;
 
 	    var node = _reactDom2["default"].findDOMNode(this.refs.slider);
@@ -19519,7 +19519,7 @@
 	    this.setState({ sliding: true });
 	  };
 
-	  InstagramWall.prototype.render = function render() {
+	  Slider.prototype.render = function render() {
 	    return _react2["default"].createElement(
 	      "div",
 	      { className: this.state.sliding ? _indexCss2["default"].SliderAnimated : _indexCss2["default"].Slider, ref: "slider" },
@@ -19527,7 +19527,7 @@
 	    );
 	  };
 
-	  InstagramWall.prototype.renderImages = function renderImages() {
+	  Slider.prototype.renderImages = function renderImages() {
 	    var _this4 = this;
 
 	    return this.state.images.map(function (image, index) {
@@ -19535,7 +19535,7 @@
 	    });
 	  };
 
-	  InstagramWall.prototype.renderImage = function renderImage(image, index) {
+	  Slider.prototype.renderImage = function renderImage(image, index) {
 	    var backgroundImage = "url(" + image.images.standard_resolution.url + ")";
 
 	    return _react2["default"].createElement("div", {
@@ -19544,10 +19544,10 @@
 	      style: { backgroundImage: backgroundImage } });
 	  };
 
-	  return InstagramWall;
+	  return Slider;
 	})(_react.Component);
 
-	exports["default"] = InstagramWall;
+	exports["default"] = Slider;
 	module.exports = exports["default"];
 
 /***/ },
@@ -19555,7 +19555,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"Slider":"index__Slider___3bho0","SliderAnimated":"index__SliderAnimated___31cxt index__Slider___3bho0","bounce":"index__bounce___3ANPo","ImageContainer":"index__ImageContainer___aDqb9","ImageContainerNotVisible":"index__ImageContainerNotVisible___39HGf index__ImageContainer___aDqb9"};
+	module.exports = {"Slider":"index__Slider___1vBqh","SliderAnimated":"index__SliderAnimated___zbp9h index__Slider___1vBqh","bounce":"index__bounce___1rGQH","ImageContainer":"index__ImageContainer___UwpRF","ImageContainerNotVisible":"index__ImageContainerNotVisible___2XEql index__ImageContainer___UwpRF"};
 
 /***/ },
 /* 162 */

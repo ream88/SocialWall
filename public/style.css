@@ -10,7 +10,7 @@
 /*
 Inspired by http://daneden.github.io/animate.css/
 */
-@-webkit-keyframes index__bounce___3ANPo {
+@-webkit-keyframes index__bounce___1rGQH {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
             transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
@@ -41,7 +41,7 @@ Inspired by http://daneden.github.io/animate.css/
             transform: translate3d(calc(50vw * -1), 0, 0);
   }
 }
-@keyframes index__bounce___3ANPo {
+@keyframes index__bounce___1rGQH {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
             transition-timing-function: cubic-bezier(1.000, 0.355, 0.610, 0.215);
@@ -74,7 +74,7 @@ Inspired by http://daneden.github.io/animate.css/
 }
 
 
-.index__Slider___3bho0 {
+.index__Slider___1vBqh {
   width: 100vw;
   height: 100vh;
 
@@ -88,17 +88,17 @@ Inspired by http://daneden.github.io/animate.css/
 }
 
 
-  .index__SliderAnimated___31cxt {
+  .index__SliderAnimated___zbp9h {
 
     -webkit-animation-duration: .5s;
 
             animation-duration: .5s;
-    -webkit-animation-name: index__bounce___3ANPo;
-            animation-name: index__bounce___3ANPo;
+    -webkit-animation-name: index__bounce___1rGQH;
+            animation-name: index__bounce___1rGQH;
   }
 
 
-.index__ImageContainer___aDqb9 {
+.index__ImageContainer___UwpRF {
   height: 100vh;
   min-width: 50vw;
 
@@ -108,7 +108,7 @@ Inspired by http://daneden.github.io/animate.css/
 }
 
 
-  .index__ImageContainerNotVisible___39HGf {
+  .index__ImageContainerNotVisible___2XEql {
 
     margin-left: 2vw;
   }
