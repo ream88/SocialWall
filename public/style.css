@@ -146,7 +146,7 @@ Inspired by http://daneden.github.io/animate.css/
   border-top-left-radius: 3.5px;
   border-top-right-radius: 3.5px;
 
-  -webkit-box-shadow: #fee3c7 0 3px;
+  box-shadow: #fee3c7 0 3px;
   background-color: #fff4e8;
   color: #303e49;
   font-size: 25px;
