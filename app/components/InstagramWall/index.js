@@ -65,10 +65,8 @@ export default class InstagramWall extends Component {
 
   render() {
     return (
-      <div className={styles.Wall}>
-        <div className={this.state.sliding ? styles.SliderAnimated : styles.Slider} ref="slider">
-          {this.state.images.length == 0 ? "" : this.renderImages()}
-        </div>
+      <div className={this.state.sliding ? styles.SliderAnimated : styles.Slider} ref="slider">
+        {this.state.images.length == 0 ? "" : this.renderImages()}
       </div>
     );
   }

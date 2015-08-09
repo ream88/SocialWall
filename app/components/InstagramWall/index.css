@@ -34,17 +34,10 @@ Inspired by http://daneden.github.io/animate.css/
 }
 
 
-.Wall {
+.Slider {
   width: 100vw;
   height: 100vh;
 
-  overflow: hidden;
-
-  background-color: black;
-}
-
-
-.Slider {
   display: flex;
 }
 

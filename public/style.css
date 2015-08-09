@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 
+  overflow: hidden;
+
+  background-color: black;
   font-family: "Forum", cursive;
 }
 /*
@@ -71,20 +74,16 @@ Inspired by http://daneden.github.io/animate.css/
 }
 
 
-.index__Wall___1scWl {
+.index__Slider___3bho0 {
   width: 100vw;
   height: 100vh;
 
-  overflow: hidden;
-
-  background-color: black;
-}
-
-
-.index__Slider___3bho0 {
   display: -webkit-box;
+
   display: -webkit-flex;
+
   display: -ms-flexbox;
+
   display: flex;
 }
 

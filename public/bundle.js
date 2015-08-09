@@ -19522,12 +19522,8 @@
 	  InstagramWall.prototype.render = function render() {
 	    return _react2["default"].createElement(
 	      "div",
-	      { className: _indexCss2["default"].Wall },
-	      _react2["default"].createElement(
-	        "div",
-	        { className: this.state.sliding ? _indexCss2["default"].SliderAnimated : _indexCss2["default"].Slider, ref: "slider" },
-	        this.state.images.length == 0 ? "" : this.renderImages()
-	      )
+	      { className: this.state.sliding ? _indexCss2["default"].SliderAnimated : _indexCss2["default"].Slider, ref: "slider" },
+	      this.state.images.length == 0 ? "" : this.renderImages()
 	    );
 	  };
 
@@ -19559,7 +19555,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","SliderAnimated":"index__SliderAnimated___31cxt index__Slider___3bho0","bounce":"index__bounce___3ANPo","ImageContainer":"index__ImageContainer___aDqb9","ImageContainerNotVisible":"index__ImageContainerNotVisible___39HGf index__ImageContainer___aDqb9"};
+	module.exports = {"Slider":"index__Slider___3bho0","SliderAnimated":"index__SliderAnimated___31cxt index__Slider___3bho0","bounce":"index__bounce___3ANPo","ImageContainer":"index__ImageContainer___aDqb9","ImageContainerNotVisible":"index__ImageContainerNotVisible___39HGf index__ImageContainer___aDqb9"};
 
 /***/ },
 /* 162 */
