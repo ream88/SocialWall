@@ -1,6 +1,8 @@
 import styles from "./index.css";
 
 import React, { Component, PropTypes } from "react";
+import ReactDOM from "react-dom";
+import ReactTransitionEvents from "react/lib/ReactTransitionEvents";
 
 
 export default class InstagramWall extends Component {
@@ -41,25 +43,30 @@ export default class InstagramWall extends Component {
 
 
   next() {
+    const node = ReactDOM.findDOMNode(this.refs.slider);
+    const endListener = (e) => {
+      if(e && e.target !== node) return;
+
+      ReactTransitionEvents.removeEndEventListener(node, endListener);
+
+      const images = this.state.images;
+      const movingImage = images.shift();
+
+      if(images.length <= 5) images.push(movingImage);
+
+      this.setState({ images, sliding: false });
+    };
+
+    ReactTransitionEvents.addEndEventListener(node, endListener);
+
     this.setState({ sliding: true });
-
-    setTimeout(() => {
-      requestAnimationFrame(() => {
-        const images = this.state.images;
-        const movingImage = images.shift();
-
-        if(images.length <= 5) images.push(movingImage);
-
-        this.setState({ images, sliding: false });
-      })
-    }, 500);
   }
 
 
   render() {
     return (
       <div className={styles.Wall}>
-        <div className={styles[this.state.sliding ? "Slider--animated" : "Slider--not-animated"]}>
+        <div className={this.state.sliding ? styles["Slider--animated"] : styles.Slider} ref="slider">
           {this.state.images.length == 0 ? "" : this.renderImages()}
         </div>
       </div>

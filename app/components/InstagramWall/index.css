@@ -10,8 +10,6 @@
 
 .Slider {
   display: flex;
-
-  -webkit-backface-visibility: hidden;
 }
 
 /*

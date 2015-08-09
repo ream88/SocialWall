@@ -12,6 +12,7 @@
   "dependencies": {
     "jsonp": "^0.2.0",
     "react": "^0.14.0-beta3",
+    "react-addons-css-transition-group": "^0.14.0-beta3",
     "react-dom": "^0.14.0-beta3",
     "react-redux": "^0.2.2",
     "redux": "^1.0.0-rc",

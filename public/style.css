@@ -19,8 +19,6 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-
-  -webkit-backface-visibility: hidden;
 }
 
 /*
