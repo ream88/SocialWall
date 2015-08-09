@@ -15,7 +15,9 @@ module.exports = {
     ]
   },
   postcss: [
-    require("autoprefixer-core")()
+    require("autoprefixer-core")(),
+    require("postcss-calc")(),
+    require("postcss-custom-properties")()
   ],
   plugins: [
     new ExtractTextPlugin("style.css", { allChunks: true }),

@@ -4,23 +4,6 @@
 
   font-family: "Forum", cursive;
 }
-.index__Wall___1scWl {
-  width: 100vw;
-  height: 100vh;
-
-  overflow: hidden;
-
-  background-color: black;
-}
-
-
-.index__Slider___3bho0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 /*
 Inspired by http://daneden.github.io/animate.css/
 */
@@ -41,18 +24,18 @@ Inspired by http://daneden.github.io/animate.css/
   }
 
   70% {
-    -webkit-transform: translate3d(-51vw, 0, 0);
-            transform: translate3d(-51vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1 - 2vw / 2), 0, 0);
+            transform: translate3d(calc(50vw * -1 - 2vw / 2), 0, 0);
   }
 
   85% {
-    -webkit-transform: translate3d(-49.5vw, 0, 0);
-            transform: translate3d(-49.5vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1 + 2vw / 4), 0, 0);
+            transform: translate3d(calc(50vw * -1 + 2vw / 4), 0, 0);
   }
 
   100% {
-    -webkit-transform: translate3d(-50vw, 0, 0);
-            transform: translate3d(-50vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1), 0, 0);
+            transform: translate3d(calc(50vw * -1), 0, 0);
   }
 }
 @keyframes index__bounce___3ANPo {
@@ -72,37 +55,47 @@ Inspired by http://daneden.github.io/animate.css/
   }
 
   70% {
-    -webkit-transform: translate3d(-51vw, 0, 0);
-            transform: translate3d(-51vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1 - 2vw / 2), 0, 0);
+            transform: translate3d(calc(50vw * -1 - 2vw / 2), 0, 0);
   }
 
   85% {
-    -webkit-transform: translate3d(-49.5vw, 0, 0);
-            transform: translate3d(-49.5vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1 + 2vw / 4), 0, 0);
+            transform: translate3d(calc(50vw * -1 + 2vw / 4), 0, 0);
   }
 
   100% {
-    -webkit-transform: translate3d(-50vw, 0, 0);
-            transform: translate3d(-50vw, 0, 0);
+    -webkit-transform: translate3d(calc(50vw * -1), 0, 0);
+            transform: translate3d(calc(50vw * -1), 0, 0);
   }
 }
 
 
-  .index__Slider--animated___ppQv2 {
+.index__Wall___1scWl {
+  width: 100vw;
+  height: 100vh;
 
-    -webkit-animation-duration: 0.5s;
+  overflow: hidden;
 
-            animation-duration: 0.5s;
+  background-color: black;
+}
+
+
+.index__Slider___3bho0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+  .index__SliderAnimated___31cxt {
+
+    -webkit-animation-duration: .5s;
+
+            animation-duration: .5s;
     -webkit-animation-name: index__bounce___3ANPo;
             animation-name: index__bounce___3ANPo;
-  }
-
-
-  .index__Slider--not-animated___1AU7H {
-
-    -webkit-transform: translate3d(0, 0, 0);
-
-            transform: translate3d(0, 0, 0);
   }
 
 
@@ -114,6 +107,12 @@ Inspired by http://daneden.github.io/animate.css/
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+  .index__ImageContainerNotVisible___39HGf {
+
+    margin-left: 2vw;
+  }
 .index__Overlay___1fUrc {
   height: 100vh;
   width: 100vw;

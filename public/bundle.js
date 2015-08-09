@@ -19525,7 +19525,7 @@
 	      { className: _indexCss2["default"].Wall },
 	      _react2["default"].createElement(
 	        "div",
-	        { className: this.state.sliding ? _indexCss2["default"]["Slider--animated"] : _indexCss2["default"].Slider, ref: "slider" },
+	        { className: this.state.sliding ? _indexCss2["default"].SliderAnimated : _indexCss2["default"].Slider, ref: "slider" },
 	        this.state.images.length == 0 ? "" : this.renderImages()
 	      )
 	    );
@@ -19534,16 +19534,16 @@
 	  InstagramWall.prototype.renderImages = function renderImages() {
 	    var _this4 = this;
 
-	    return this.state.images.map(function (image) {
-	      return _this4.renderImage(image);
+	    return this.state.images.map(function (image, index) {
+	      return _this4.renderImage(image, index);
 	    });
 	  };
 
-	  InstagramWall.prototype.renderImage = function renderImage(image) {
+	  InstagramWall.prototype.renderImage = function renderImage(image, index) {
 	    var backgroundImage = "url(" + image.images.standard_resolution.url + ")";
 
 	    return _react2["default"].createElement("div", {
-	      className: _indexCss2["default"].ImageContainer,
+	      className: index > 2 ? _indexCss2["default"].ImageContainerNotVisible : _indexCss2["default"].ImageContainer,
 	      key: image.id,
 	      style: { backgroundImage: backgroundImage } });
 	  };
@@ -19559,7 +19559,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","Slider--animated":"index__Slider--animated___ppQv2 index__Slider___3bho0","bounce":"index__bounce___3ANPo","Slider--not-animated":"index__Slider--not-animated___1AU7H index__Slider___3bho0","ImageContainer":"index__ImageContainer___aDqb9"};
+	module.exports = {"Wall":"index__Wall___1scWl","Slider":"index__Slider___3bho0","SliderAnimated":"index__SliderAnimated___31cxt index__Slider___3bho0","bounce":"index__bounce___3ANPo","ImageContainer":"index__ImageContainer___aDqb9","ImageContainerNotVisible":"index__ImageContainerNotVisible___39HGf index__ImageContainer___aDqb9"};
 
 /***/ },
 /* 162 */

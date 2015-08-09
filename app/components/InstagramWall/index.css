@@ -1,16 +1,8 @@
-.Wall {
-  width: 100vw;
-  height: 100vh;
-
-  overflow: hidden;
-
-  background-color: black;
+:root {
+  --bounce-overflow: 2vw;
+  --image-width: 50vw;
 }
 
-
-.Slider {
-  display: flex;
-}
 
 /*
 Inspired by http://daneden.github.io/animate.css/
@@ -25,35 +17,43 @@ Inspired by http://daneden.github.io/animate.css/
   }
 
   40% {
-    transform: translate3d(2vw, 0, 0);
+    transform: translate3d(var(--bounce-overflow), 0, 0);
   }
 
   70% {
-    transform: translate3d(-51vw, 0, 0);
+    transform: translate3d(calc(var(--image-width) * -1 - var(--bounce-overflow) / 2), 0, 0);
   }
 
   85% {
-    transform: translate3d(-49.5vw, 0, 0);
+    transform: translate3d(calc(var(--image-width) * -1 + var(--bounce-overflow) / 4), 0, 0);
   }
 
   100% {
-    transform: translate3d(-50vw, 0, 0);
+    transform: translate3d(calc(var(--image-width) * -1), 0, 0);
   }
 }
 
 
-  .Slider--animated {
+.Wall {
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background-color: black;
+}
+
+
+.Slider {
+  display: flex;
+}
+
+
+  .SliderAnimated {
     composes: Slider;
 
-    animation-duration: 0.5s;
+    animation-duration: .5s;
     animation-name: bounce;
-  }
-
-
-  .Slider--not-animated {
-    composes: Slider;
-
-    transform: translate3d(0, 0, 0);
   }
 
 
@@ -65,3 +65,10 @@ Inspired by http://daneden.github.io/animate.css/
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+  .ImageContainerNotVisible {
+    composes: ImageContainer;
+
+    margin-left: var(--bounce-overflow);
+  }
