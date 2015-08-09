@@ -135,6 +135,7 @@ Inspired by http://daneden.github.io/animate.css/
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-font-smoothing: antialiased;
 }
 
 
